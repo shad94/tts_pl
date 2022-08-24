@@ -43,27 +43,23 @@ def _expand_currency(m: "re.Match") -> str:
     currencies = {
         "$": {
             0.01: "cent",
-            0.02: "cents",
-            1: "dollar",
-            2: "dollars",
+            0.02: "centy",
+            1: "dolar",
+            2: "dolary",
         },
         "€": {
             0.01: "cent",
-            0.02: "cents",
+            0.02: "centy",
             1: "euro",
-            2: "euros",
+            2: "euro",
         },
         "£": {
-            0.01: "penny",
-            0.02: "pence",
-            1: "pound sterling",
-            2: "pounds sterling",
+            0.01: "grosik",
+            0.02: "pens",
+            1: "funt",
+            2: "funty",
         },
-        "¥": {
-            # TODO rin
-            0.02: "sen",
-            2: "yen",
-        },
+       
     }
     unit = m.group(1)
     currency = currencies[unit]
@@ -79,11 +75,11 @@ def _expand_number(m):
     num = int(m.group(0))
     if 1000 < num < 3000:
         if num == 2000:
-            return "two thousand"
+            return "dwa tysiące"
         if 2000 < num < 2010:
-            return "two thousand " + _inflect.number_to_words(num % 100)
+            return "dwa tysiące " + _inflect.number_to_words(num % 100)
         if num % 100 == 0:
-            return _inflect.number_to_words(num // 100) + " hundred"
+            return _inflect.number_to_words(num // 100) + " sto"
         return _inflect.number_to_words(num, andword="", zero="oh", group=2).replace(", ", " ")
     return _inflect.number_to_words(num, andword="")
 

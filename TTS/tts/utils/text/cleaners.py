@@ -16,8 +16,8 @@ from .french.abbreviations import abbreviations_fr
 _whitespace_re = re.compile(r"\s+")
 
 
-def expand_abbreviations(text, lang="en"):
-    if lang == "en":
+def expand_abbreviations(text, lang="pl"):
+    if lang == "pl":
         _abbreviations = abbreviations_en
     elif lang == "fr":
         _abbreviations = abbreviations_fr
@@ -43,11 +43,11 @@ def remove_aux_symbols(text):
     return text
 
 
-def replace_symbols(text, lang="en"):
+def replace_symbols(text, lang="pl"):
     text = text.replace(";", ",")
     text = text.replace("-", " ")
     text = text.replace(":", ",")
-    if lang == "en":
+    if lang == "pl":
         text = text.replace("&", " and ")
     elif lang == "fr":
         text = text.replace("&", " et ")
