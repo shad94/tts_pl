@@ -73,6 +73,27 @@ def _expand_ordinal(m):
 
 def _expand_number(m):
     num = int(m.group(0))
+    if -1 < num < 10:
+        if num == 0:
+            return "zero"
+        if num == 1:
+            return "jeden"
+        if num == 2:
+            return "dwa"
+        if num == 3:
+            return "trzy"
+        if num == 4:
+            return "cztery"
+        if num == 5:
+            return "pięć"
+        if num == 6:
+            return "sześć"
+        if num == 7:
+            return "siedem"
+        if num == 8:
+            return "osiem"
+        if num == 9:
+            return "dziewięć"
     if 1000 < num < 3000:
         if num == 2000:
             return "dwa tysiące"
