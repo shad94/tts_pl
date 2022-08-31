@@ -26,7 +26,7 @@ _punctuations = "!'(),-.:;? "
 
 # DEFAULT SET OF IPA PHONEMES
 # Phonemes definition (All IPA characters)
-_vowels = "iyɨʉɯuɪʏʊeøɘəɵɤoɛœɜɞʌɔæɐaɶɑɒᵻ"
+_vowels = "iyɨʉɯuɪʏʊeøɘəɵɤoɛœɜɞʌɔæɐaɶɑɒᵻ̃"
 _non_pulmonic_consonants = "ʘɓǀɗǃʄǂɠǁʛ"
 _pulmonic_consonants = "pbtdʈɖcɟkɡqɢʔɴŋɲɳnɱmʙrʀⱱɾɽɸβfvθðszʃʒʂʐçʝxɣχʁħʕhɦɬɮʋɹɻjɰlɭʎʟ"
 _suprasegmentals = "ˈˌːˑ"
