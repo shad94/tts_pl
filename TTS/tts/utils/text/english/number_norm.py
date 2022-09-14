@@ -73,7 +73,7 @@ def _expand_ordinal(m):
 
 def _expand_number(m):
     num = int(m.group(0))
-    if -1 < num < 10:
+    if -1 < num < 32:
         if num == 0:
             return "zero"
         if num == 1:
@@ -94,6 +94,50 @@ def _expand_number(m):
             return "osiem"
         if num == 9:
             return "dziewięć"
+        if num == 10:
+            return "dziesięć"
+        if num == 11:
+            return "jedenaście"
+        if num == 12:
+            return "dwanaście"
+        if num == 13:
+            return "trzynaście"
+        if num == 14:
+            return "czternaście"
+        if num == 15:
+            return "piętnaście"
+        if num == 16:
+            return "szesnaście"
+        if num == 17:
+            return "siedemnaście"
+        if num == 18:
+            return "osiemnaście"
+        if num == 19:
+            return "dziewiętnaście"
+        if num == 20:
+            return "dwadzieścia"
+        if num == 21:
+            return "dwadzieścia jeden"
+        if num == 22:
+            return "dwadzieścia dwa"
+        if num == 23:
+            return "dwadzieścia trzy"
+        if num == 24:
+            return "dwadzieścia cztery"
+        if num == 25:
+            return "dwadzieścia pięć"
+        if num == 26:
+            return "dwadzieścia sześć"
+        if num == 27:
+            return "dwadzieścia siedem"
+        if num == 28:
+            return "dwadzieścia osiem"
+        if num == 29:
+            return "dwadzieścia dziewięć"
+        if num == 30:
+            return "trzydzieści"
+        if num == 31:
+            return "trzydzieści jeden"
     if 1000 < num < 3000:
         if num== 2022:
             return "dwa tysiące dwadzieścia dwa"
