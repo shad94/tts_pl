@@ -146,7 +146,7 @@ def _expand_number(m):
         if 2000 < num < 2070:
             return "dwa tysiące " + _inflect.number_to_words(num % 100)
         if num % 100 == 0:
-            return _inflect.number_to_words(num // 100, lang="pl") + " sto"
+            return _inflect.number_to_words(num // 100) + " sto"
         return _inflect.number_to_words(num, andword="", zero="oh", group=2).replace(", ", " ")
     return _inflect.number_to_words(num, andword="")
 
