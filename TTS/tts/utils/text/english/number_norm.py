@@ -68,7 +68,7 @@ def _expand_currency(m: "re.Match") -> str:
 
 
 def _expand_ordinal(m):
-    return _inflect.number_to_words(m.group(0), lang="pl")
+    return _inflect.number_to_words(m.group(0))
 
 
 def _expand_number(m):
@@ -144,11 +144,11 @@ def _expand_number(m):
         if num == 2000:
             return "dwa tysiące"
         if 2000 < num < 2070:
-            return "dwa tysiące " + _inflect.number_to_words(num % 100, lang="pl")
+            return "dwa tysiące " + _inflect.number_to_words(num % 100)
         if num % 100 == 0:
             return _inflect.number_to_words(num // 100, lang="pl") + " sto"
-        return _inflect.number_to_words(num, andword="", zero="oh", group=2, lang="pl").replace(", ", " ")
-    return _inflect.number_to_words(num, andword="",lang="pl")
+        return _inflect.number_to_words(num, andword="", zero="oh", group=2).replace(", ", " ")
+    return _inflect.number_to_words(num, andword="")
 
 
 def normalize_numbers(text):
